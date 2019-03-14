@@ -12,14 +12,35 @@ namespace CO453PartB3
 {
     public partial class MenuForm : Form
     {
+        decimal starterCost, mainCost, totalCost;
+
         public MenuForm()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void QuitForm(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void SelectStarter(object sender, EventArgs e)
+        {
+            switch (starterListBox.SelectedIndex)
+            {
+                case 0 : starterCost = 4.50m; break;
+                case 1 : starterCost = 5.50m; break;
+                case 2: starterCost = 3.50m; break;
+            }
+
+            CalculateTotalCost();
+        }
+
+        private void CalculateTotalCost()
+        {
+            totalCost = starterCost + mainCost;
+
+            costLabel.Text = "Total Cost: " + totalCost.ToString("c");
         }
     }
 }
