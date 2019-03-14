@@ -58,6 +58,12 @@
     <Compile Include="MenuForm.Designer.cs">
       <DependentUpon>MenuForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MonkeyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MonkeyForm.Designer.cs">
+      <DependentUpon>MonkeyForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="PizzaForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +78,9 @@
     <EmbeddedResource Include="MenuForm.resx">
       <DependentUpon>MenuForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MonkeyForm.resx">
+      <DependentUpon>MonkeyForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PizzaForm.resx">
       <DependentUpon>PizzaForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -83,6 +92,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -96,6 +106,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Artichoke.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\monkey.wmf" />
+    <Content Include="Resources\Target.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

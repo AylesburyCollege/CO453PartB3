@@ -35,6 +35,8 @@
             this.costLabel = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.mainListBox = new System.Windows.Forms.ListBox();
+            this.desertComboBox = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -64,9 +66,11 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Image = global::CO453PartB3.Properties.Resources.Artichoke;
             this.pictureBox1.Location = new System.Drawing.Point(406, 34);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(270, 203);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
@@ -110,12 +114,37 @@
             this.mainListBox.Name = "mainListBox";
             this.mainListBox.Size = new System.Drawing.Size(260, 97);
             this.mainListBox.TabIndex = 0;
+            this.mainListBox.SelectedIndexChanged += new System.EventHandler(this.SelectMain);
+            // 
+            // desertComboBox
+            // 
+            this.desertComboBox.FormattingEnabled = true;
+            this.desertComboBox.Items.AddRange(new object[] {
+            "Yorkshire Rubarb",
+            "Chocolate Mouse"});
+            this.desertComboBox.Location = new System.Drawing.Point(406, 302);
+            this.desertComboBox.Name = "desertComboBox";
+            this.desertComboBox.Size = new System.Drawing.Size(270, 39);
+            this.desertComboBox.TabIndex = 7;
+            this.desertComboBox.Text = "<Select Desert>";
+            this.desertComboBox.SelectedIndexChanged += new System.EventHandler(this.SelectDesert);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(406, 264);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(109, 31);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Deserts";
             // 
             // MenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(712, 502);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.desertComboBox);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.costLabel);
             this.Controls.Add(this.button1);
@@ -141,5 +170,7 @@
         private System.Windows.Forms.Label costLabel;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ListBox mainListBox;
+        private System.Windows.Forms.ComboBox desertComboBox;
+        private System.Windows.Forms.Label label2;
     }
 }

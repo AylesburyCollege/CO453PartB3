@@ -10,13 +10,39 @@ using System.Windows.Forms;
 
 namespace CO453PartB3
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public partial class MenuForm : Form
     {
-        decimal starterCost, mainCost, totalCost;
+        decimal starterCost, mainCost, desertCost, totalCost;
 
         public MenuForm()
         {
             InitializeComponent();
+            //desertComboBox.SelectedIndex = 0;
+        }
+
+        private void SelectDesert(object sender, EventArgs e)
+        {
+            switch (desertComboBox.SelectedIndex)
+            {
+                case 0 : desertCost = 6.00m; break;
+                case 1 : desertCost = 5.00m; break;
+            }
+
+            CalculateTotalCost();
+        }
+
+        private void SelectMain(object sender, EventArgs e)
+        {
+            switch(mainListBox.SelectedIndex)
+            {
+                case 0: mainCost = 15.00m; break;
+                case 1: mainCost = 16.00m; break;
+            }
+
+            CalculateTotalCost();
         }
 
         private void QuitForm(object sender, EventArgs e)
@@ -38,7 +64,7 @@ namespace CO453PartB3
 
         private void CalculateTotalCost()
         {
-            totalCost = starterCost + mainCost;
+            totalCost = starterCost + mainCost + desertCost;
 
             costLabel.Text = "Total Cost: " + totalCost.ToString("c");
         }
