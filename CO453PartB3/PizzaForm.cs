@@ -24,6 +24,8 @@ namespace CO453PartB3
             toppings[1] = checkBox2;
             toppings[2] = checkBox3;
             toppings[3] = checkBox4;
+
+            CalculateCost(null, null);
         }
 
         /// <summary>

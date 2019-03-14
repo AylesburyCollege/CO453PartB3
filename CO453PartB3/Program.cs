@@ -16,7 +16,7 @@ namespace CO453PartB3
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MenuForm());
+            Application.Run(new PizzaForm());
         }
     }
 }
