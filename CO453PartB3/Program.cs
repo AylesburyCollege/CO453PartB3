@@ -16,7 +16,7 @@ namespace CO453PartB3
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TipsterForm());
+            Application.Run(new MyWordForm());
         }
     }
 }

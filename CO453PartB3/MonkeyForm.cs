@@ -28,8 +28,8 @@ namespace CO453PartB3
         /// </summary>
         private void MoveMonkey(object sender, EventArgs e)
         {
-            x = generator.Next(gamePanel.Width - 100);
-            y = generator.Next(gamePanel.Height - 100);
+            x = generator.Next(gamePanel.Width - monkeyPictureBox.Width);
+            y = generator.Next(gamePanel.Height -monkeyPictureBox.Height);
 
             monkeyPictureBox.Left = x;
             monkeyPictureBox.Top = y;
@@ -80,7 +80,7 @@ namespace CO453PartB3
 
         /// <summary>
         /// If the Picture box is clicked then the monkey has been
-        /// hit (Panel.Click)
+        /// hit (PictureBox.Click)
         /// </summary>
         private void HitMonkey(object sender, EventArgs e)
         {
